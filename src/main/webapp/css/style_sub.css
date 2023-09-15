@@ -1,0 +1,904 @@
+@import
+	url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css")
+	;
+
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+@font-face {
+	font-family: 'ChosunGs';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.endless_title:hover {
+	color: white !important;
+}
+
+.a_endlessAID:hover {
+	color: #000000 !important;
+}
+
+.worship_return {
+	padding-right: 20px;
+}
+/* main 중간 온라인 추모공간 css 시작 */
+li {
+	list-style: none;
+}
+
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 1px;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.inner {
+	width: 1130px;
+	margin: 0 auto;
+}
+
+i {
+	font-style: normal;
+}
+/******************************* 관리자 사이드 바 *******************************/
+.sidebar {
+	width: 300px;
+	height: 100%;
+	position: fixed;
+}
+/******************************* 관리자 사이드 바 끝 *******************************/
+/******************************* 관리자 메인 *******************************/
+.contents {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-left: auto;
+	padding: 10px 100px;
+}
+.next_btn {
+	width: auto;
+	text-align: center;
+	color: black;
+	font-size: 1rem;
+}
+/******************************* 관리자 메인 끝*******************************/
+/******************************* 관리자 게시글 작성 *******************************/
+#admin_write {
+	width: 100%;
+    margin-bottom: 7rem;
+}
+.admin_write_inner {
+	margin: 0 auto;
+	max-width: 63.06%;
+	padding-top: 10rem;
+}
+.admin_write_head{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 4rem;
+	padding-bottom: 4rem;
+	text-align: center;
+}
+.admin_write_table{
+	width: 100%;
+}
+.admin_write_table_title{
+	width: 100%;
+	height: 1.5rem;
+}
+.admin_write_table_button{
+	text-align: center;
+}
+/******************************* 관리자 게시글 작성 끝*******************************/
+/******************************* 로그인 *******************************/
+#sec_login{
+	width: 100%;
+}
+.no_godoksa_login_inner{
+	margin: 0 auto;
+    max-width: 51.06%;
+    padding-top: 13rem;
+}
+.no_godoksa_login_title{
+	width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 4rem;
+    padding-bottom: 2.19rem;
+}
+.no_godoksa_login_title h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+.no_godoksa_login_content{
+	width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.no_godoksa_login_content_wrap{
+	width: 100%;
+    display: flex;
+    flex-flow: row;
+    background-color: #f1f1f1;
+}
+.no_godoksa_login_content_1{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+.no_godoksa_login_content_control{
+	width: 12rem;
+    height: 1.5rem;
+	align-self: center;
+	margin-top: 1rem;
+}
+.no_godoksa_login_content_btn{
+	width: 12rem;
+    height: 2rem;
+	align-self: center;
+	margin-top: 1rem;
+	color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+/******************************* 로그인 *******************************/
+
+
+/***************************************엔드리스파크 검색창***************************************/
+.navbar {
+	margin-bottom: 0;
+}
+
+.pageingNumber {
+	letter-spacing: 0.5rem;
+}
+
+.endless_searchbar_form {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	padding-top: 3rem;
+}
+
+.endless_searchbar_text {
+	width: 385px;
+	height: 45px;
+	padding-left: 18px;
+	background: #fff;
+	font-size: 1.25rem;
+	color: #333;
+	border: 2px solid #449d44;
+	outline: none;
+}
+
+.endless_searchbar_text:hover {
+	outline: none;
+}
+
+.endless_searchbar_submit img {
+	width: 50%;
+}
+
+.endless_searchbar_submit {
+	width: 64px;
+	height: 45px;
+	border: 0;
+	background: #449d44;
+	color: #fff;
+	cursor: pointer;
+}
+/***************************************엔드리스파크 검색창끝***************************************/
+
+
+
+/******************************* 모바일 *******************************/
+@media screen and (max-width: 1200px) {
+	/* 메인 */
+	.maincm {
+		width: 70%;
+		padding: 30px;
+	}
+	.maincmtxt {
+		margin-top: 10px;
+	}
+	.inner {
+		width: 1024px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.inner {
+		width: 768px;
+	}
+	/* 메인 */
+	.maincm>img {
+		width: 70px;
+		height: auto;
+	}
+	.maincmtxt>img {
+		width: 50px;
+		height: auto;
+	}
+	.maincmtxt {
+		margin-top: 0px;
+	}
+	.chumolist ul {
+		width: 33.33%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	header {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 18px;
+	}
+	input, textarea, button, select {
+		font-size: 18px;
+	}
+	.inner {
+		max-width: 95%;
+		padding: 50px;
+	}
+	.maincmbanner {
+		flex-direction: column;
+	}
+	.maincm {
+		width: 100%;
+		padding: 30px;
+	}
+	.maincm>img {
+		width: 10%;
+		float: left;
+		margin-right: 20px;
+	}
+	.maincmtxt>img {
+		float: right;
+		width: 10%;
+		margin-top: -20px;
+	}
+	.maincmtxt h4 {
+		font-size: 24px;
+		color: #1f61ad;
+	}
+	.maincmtxt p {
+		font-size: 16px;
+	}
+	.maincmtxt {
+		margin-top: 10px;
+	}
+	/* 메인 추모리스트 */
+	.chumoinner>h2 {
+		font-size: 30px;
+	}
+	.chumolist {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	.chumolist ul {
+		width: 100%;
+		padding: 25px;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.header_inner h6 img {
+		display: block;
+		width: 50%;
+		height: auto;
+		margin: 0 auto;
+	}
+	.main>h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.maincmtxt {
+		margin-top: 0px;
+	}
+	.maincm>img {
+		width: 14%;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 480px) {
+	.main {
+		padding: 200px 50px 100px 50px;
+	}
+	.maincm>img {
+		width: 18%;
+	}
+	.maincmtxt>img {
+		display: none;
+	}
+}
+
+hr {
+	border-top: none;
+}
+/* main 중간 온라인 추모공간 css 끝 */
+
+
+
+
+/***************************** 고독사 체크 결과페이지 *****************************/
+.xx_inner {
+	margin: 0 auto;
+	max-width: 63.06%;
+	padding-top: 13rem;
+}
+
+#sec1_goduk_result {
+	width: 100%;
+}
+
+.goduk_contents_top_result {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 4rem;
+	padding-bottom: 4rem;
+}
+
+.goduk_contents_top_result h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+
+.goduk_contents_result {
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 8rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #000000;
+	cursor: pointer;
+	border: 1.5px solid #000000;
+	background-color: #ffffff;
+}
+
+.goduk_contents_middle_result {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+.goduk_contents_middle_result_1 {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	padding: 1rem;
+	background-color: #06442e;
+}
+
+.goduk_contents_middle_result_1 h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.goduk_contents_middle_result_1 h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #ffffff;
+	align-items: center;
+	display: flex;
+	margin: 0 auto;
+}
+
+.goduk_contents_middle_result_2 {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	border-bottom: 1px solid #dedede;
+}
+
+.goduk_contents_middle_result_2_1 {
+	width: 60px;
+	font-size: 1.25rem;
+	text-align: center;
+	font-weight: bold;
+	padding: 1.5rem;
+	background-color: #f1f1f1;
+}
+
+.goduk_contents_middle_result_2_2 {
+	font-size: 1.25rem;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	font-weight: bold;
+}
+
+.goduk_contents_middle_result_3 {
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row;
+	border: 1px solid #dedede;
+}
+
+.goduk_contents_middle_result_3_1 {
+	width: 40%;
+	font-size: 1.25rem;
+	text-align: center;
+	font-weight: bold;
+	padding: 1.5rem;
+	background-color: #f1f1f1;
+}
+
+.goduk_contents_middle_result_3_2 {
+	width: 60%;
+	justify-content: center;
+	font-size: 1.25rem;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	font-weight: bold;
+}
+/***************************** 고독사 체크 결과페이지 *****************************/
+/***************************** 고독사 내정보 페이지 *****************************/
+#sec1_goduk_info {
+	width: 100%;
+    margin-bottom: 7rem;
+}
+
+.goduk_myInfo_inner {
+	margin: 0 auto;
+	max-width: 63.06%;
+	padding-top: 13rem;
+}
+.goduck_myInfo_main{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 4rem;
+	padding-bottom: 4rem;
+}
+.goduck_myInfo_main h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+.goduck_myInfo_main_info{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+}
+.goduck_myInfo_main_info_1{
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	padding: 1rem;
+	background-color: #06442e;
+}
+.goduck_myInfo_main_info_1 h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #ffffff;
+	align-items: center;
+	display: flex;
+	margin: 0 auto;
+}
+.goduck_myInfo_main_info_2_0{
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+}
+.goduck_myInfo_main_info_2{
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	border-bottom: 1px solid #dedede;
+}
+.goduck_myInfo_main_info_2_1{
+    width: 18%;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+}
+.goduck_myInfo_main_info_99_99{
+    width: 83%;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem;
+    background-color: #f1f1f1;
+}
+.goduck_myInfo_main_info_2_2{
+	width: 100%;
+	font-size: 1.25rem;
+	display: flex;
+    justify-content: center;
+	margin: 0 auto;
+	align-items: center;
+	font-weight: bold;
+}
+
+
+
+/*반응형 */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+	.sub2_mainbox_firstpart_contents p {
+		font-size: 1.58rem;
+	}
+	.sub2_mainbox_firstpart_contents {
+		width: 91%;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.title_front_sparex h1 {
+		font-size: 20px;
+	}
+	.btn_boxy {
+		flex-flow: column;
+	}
+	.button_box_first {
+		width: 100%;
+	}
+	.button_box_first_img {
+		width: 8%;
+	}
+	.button_box_second {
+		width: 100%;
+	}
+	.button_box_second_img {
+		width: 8%;
+	}
+	.arrow_right_cicle_img {
+		padding-right: 4rem;
+	}
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+	.enter_button_wrap {
+		flex-flow: column;
+	}
+	.sub2_mainbox_firstpart_contents p {
+		font-size: 1.58rem;
+	}
+	.sub2_mainbox_firstpart_contents {
+		width: 91%;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.title_front_sparex h1 {
+		font-size: 20px;
+	}
+	.btn_boxy {
+		flex-flow: column;
+	}
+	.button_box_first {
+		width: 100%;
+	}
+	.button_box_first_img {
+		width: 13%;
+	}
+	.button_box_second {
+		width: 100%;
+	}
+	.button_box_second_img {
+		width: 13%;
+	}
+	.arrow_right_cicle_img {
+		padding-right: 4rem;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 979px) {
+	.enter_button_wrap {
+		flex-flow: column;
+	}
+	.sub2_mainbox_firstpart_contents p {
+		font-size: 1.58rem;
+	}
+	.sub2_mainbox_firstpart_contents {
+		width: 91%;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.title_front_sparex h1 {
+		font-size: 20px;
+	}
+	.btn_boxy {
+		flex-flow: column;
+	}
+	.button_box_first {
+		width: 100%;
+	}
+	.button_box_first_img {
+		width: 17%;
+	}
+	.button_box_second {
+		width: 100%;
+	}
+	.button_box_second_img {
+		width: 17%;
+	}
+	.arrow_right_cicle_img {
+		padding-right: 4rem;
+	}
+}
+
+@media screen and (min-width: 680px) and (max-width: 799px) {
+	.enter_button_wrap {
+		flex-flow: column;
+	}
+	.sub2_mainbox_firstpart_contents p {
+		font-size: 1.58rem;
+	}
+	.sub2_mainbox_firstpart_contents {
+		width: 91%;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.title_front_sparex h1 {
+		font-size: 20px;
+	}
+	.btn_boxy {
+		flex-flow: column;
+	}
+	.button_box_first {
+		width: 100%;
+	}
+	.button_box_first_img {
+		width: 17%;
+	}
+	.button_box_first_txtbox h1 {
+		font-size: 1.6rem;
+	}
+	.button_box_first_txtbox p {
+		font-size: 1rem;
+	}
+	.button_box_second_txtbox h1 {
+		font-size: 1.6rem;
+	}
+	.button_box_second_txtbox p {
+		font-size: 1rem;
+	}
+	.button_box_second {
+		width: 100%;
+	}
+	.button_box_second_img {
+		width: 17%;
+	}
+	.arrow_right_cicle_img {
+		padding-right: 4rem;
+	}
+	.arrow_right_cicle_img {
+		width: 7%;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 679px) {
+	.enter_button_wrap {
+		flex-flow: column;
+	}
+	.main_background_text {
+		font-size: 30px;
+	}
+	.main_background_text_sub1 {
+		font-size: 30px;
+	}
+	.main_background_text_sub2 {
+		font-size: 20px;
+	}
+	.sub2_mainbox_firstpart_contents p {
+		font-size: 1.58rem;
+	}
+	.sub2_mainbox_firstpart_contents {
+		width: 91%;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.title_front_sparex h1 {
+		font-size: 20px;
+	}
+	.btn_boxy {
+		flex-flow: column;
+	}
+	.button_box_first {
+		width: 100%;
+	}
+	.button_box_first_img {
+		width: 23%;
+	}
+	.button_box_second {
+		width: 100%;
+	}
+	.button_box_first_txtbox h1 {
+		font-size: 1.4rem;
+	}
+	.button_box_first_txtbox p {
+		font-size: 0.9rem;
+	}
+	.button_box_second_txtbox h1 {
+		font-size: 1.4rem;
+	}
+	.button_box_second_txtbox p {
+		font-size: 0.9rem;
+	}
+	.button_box_second_img {
+		width: 23%;
+	}
+	.arrow_right_cicle_img {
+		padding-right: 4rem;
+	}
+	.arrow_right_cicle_img {
+		width: 7%;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 499px) {
+	.enter_button_wrap {
+		flex-flow: column;
+	}
+	.main_background_text {
+		font-size: 25px;
+	}
+	.main_background_text_sub1 {
+		font-size: 25px;
+	}
+	.main_background_text_sub2 {
+		font-size: 18px;
+	}
+	.main_background_xx {
+		height: 848px;
+	}
+	.sub2_mainbox_firstpart_contents p {
+		font-size: 1.58rem;
+		text-align: center;
+	}
+	.sub2_mainbox_firstpart_contents {
+		width: 91%;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.title_front_sparex h1 {
+		font-size: 20px;
+	}
+	.title_front_sparex {
+		justify-content: center;
+	}
+	.btn_boxy {
+		flex-flow: column;
+	}
+	.button_box_first {
+		width: 100%;
+	}
+	.button_box_first_img {
+		width: 30%;
+	}
+	.button_box_second {
+		width: 100%;
+	}
+	.button_box_second_img {
+		width: 30%;
+	}
+	.button_box_first_txtbox h1 {
+		font-size: 1.2rem;
+	}
+	.button_box_first_txtbox p {
+		font-size: 0.7rem;
+	}
+	.button_box_second_txtbox h1 {
+		font-size: 1.2rem;
+	}
+	.button_box_second_txtbox p {
+		font-size: 0.7rem;
+	}
+	.arrow_right_cicle_img {
+		padding-right: 2rem;
+	}
+	.arrow_right_cicle_img {
+		width: 7%;
+	}
+}
+
+@media screen and (min-width: 350px) and (max-width: 399px) {
+	.enter_button_wrap {
+		flex-flow: column;
+	}
+	.inner {
+		padding: 35px 50px;
+	}
+	.main_background_text {
+		font-size: 22px;
+	}
+	.main_background_text_sub1 {
+		font-size: 22px;
+	}
+	.main_background_text_sub2 {
+		font-size: 15px;
+	}
+	.main_background_xx {
+		height: 840px;
+	}
+	.sub2_mainbox_firstpart_contents p {
+		font-size: 1.58rem;
+		text-align: center;
+	}
+	.sub2_mainbox_firstpart_contents {
+		width: 91%;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.title_front_sparex h1 {
+		font-size: 20px;
+	}
+	.title_front_sparex {
+		justify-content: center;
+	}
+	.btn_boxy {
+		flex-flow: column;
+	}
+	.button_box_first {
+		width: 100%;
+		gap: 1rem;
+	}
+	.button_box_first_img {
+		width: 30%;
+	}
+	.button_box_second {
+		width: 100%;
+		gap: 1rem;
+	}
+	.button_box_second_img {
+		width: 30%;
+	}
+	.button_box_first_txtbox h1 {
+		font-size: 1rem;
+	}
+	.button_box_first_txtbox p {
+		font-size: 0.7rem;
+		font-weight: 500;
+	}
+	.button_box_second_txtbox h1 {
+		font-size: 1rem;
+	}
+	.button_box_second_txtbox p {
+		font-size: 0.7rem;
+		font-weight: 500;
+	}
+	.arrow_right_cicle_img {
+		padding-right: 2rem;
+	}
+	.arrow_right_cicle_img {
+		width: 7%;
+	}
+}
+/*반응형끝*/
+/*-----------------------------------------------------------*/

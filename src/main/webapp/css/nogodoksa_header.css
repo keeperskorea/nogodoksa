@@ -1,0 +1,517 @@
+/* 모든 요소에 적용 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    letter-spacing: -0.8px;
+    color:#333;
+}
+ul, li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+img{
+    vertical-align:top;
+}
+button{
+    background-color:unset;
+    border:unset;
+}
+
+
+
+
+
+/* 퀵메뉴 */
+#quick {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    animation: floting 1.5s infinite;
+}
+#quick img{        
+    width: 80px;
+    height: 80px;
+}
+  @keyframes floting {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+
+
+/* navbar 시작----------------------------------*/
+.nav_top{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #06442e;
+    color: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+#logout{
+    display: none;
+}
+.nav_log_box{
+    height: auto;
+    padding:0 7% 0 0;
+    float: right;
+}
+.nav_log_box li{
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    border-right: 1px solid #59746a;
+}
+.nav_log_box li:first-child{    
+    border-left: 1px solid #59746a;
+}
+.nav_log_box li a{
+    width: 100px;
+    height: 50px;
+    display: block;
+}
+.nav_log_box li a:hover{
+    font-weight: bold;
+
+}
+.nav_log_box li::after{
+    content: '';
+    display: block;
+    clear: 'both';
+}
+.nav_log_box #log_name{
+    width: 210px;
+    border-left: none;
+}
+
+
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* 가로중앙정렬 */
+    align-items: center; /* 수직중앙정렬 */
+    background-color: #fff;
+    height: 100px;
+    padding:0 100px;
+    /*margin-top: 50px;*/
+    color:#333;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    z-index: 999;
+}
+a:hover, a:focus{
+	 text-decoration: none;
+	 color: #06442e;
+}
+.logo{
+    height: 100px;
+    padding: 30px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #06442e;
+}
+/* 22.04.04 <.logo span> 추가 작업*/
+.logo span{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 22.04.04 숨김
+.logo b{
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    padding: 3px 7px;
+    background-color: #06442e;
+}
+*/
+
+
+
+/* 상단 메뉴 시작 */
+.nav_menu{
+    display: flex;
+    z-index: 1;
+    margin-bottom:0;
+}
+.nav_menu .nav_menu_tit{
+    width: 150px;
+    height: 100px;
+    font-size: 16px;
+    line-height: 100px;
+    text-align: center;
+}
+.nav_menu .nav_menu_tit:hover{
+    color:#06442e;
+    font-weight: bold;
+    border-bottom: 2px solid #06442e;
+}
+.nav_menu .nav_menu_tit a{
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-weight: 300;
+}
+.nav_menu > li > .sub_menu{
+    width:150px;
+    display: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.nav_menu .sub_menu > li {
+    width:150px;
+    height:55px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    line-height: 55px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.nav_menu .sub_menu > li > a{
+    height:55px;
+    width:150px;
+    display: block;
+}
+.nav_menu .sub_menu > li:last-child{
+    border-bottom:none;
+}
+.nav_menu .sub_menu > li a:hover {
+    background-color: #06442e;
+    color:#fff;
+    font-weight: 300;
+}
+.nav_menu > li:hover > .sub_menu{
+    font-weight: 300;
+    display: block;
+}
+
+
+/* 반응형 메뉴 버튼*/
+.menu_btn{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* 반응형 시작 ----------------------------------*/
+@media screen and (max-width: 1240px) {
+
+    /* 퀵메뉴 */
+    #quick {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    
+    /* navbar 시작----------------------------------*/
+    .nav_top{
+        display: none;
+    }
+
+    .navbar{
+        padding:0 50px;
+        margin-top: 0px;
+    }    
+    
+    .nav_menu{
+        display: none;
+    }
+
+
+
+
+    /* 반응형 메뉴 버튼 */
+    .menu_btn{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top:24.5px;
+    }
+    .menu_btn p{
+        font-size: 14px;
+        padding-bottom: 7px;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 0.7;
+    }
+    #menuicon{
+        display: none;
+    }
+    #menuicon + label{
+        display: block;
+        width: 40px;
+        height: 28px;
+        position: relative;
+        cursor:pointer;
+    }
+    #menuicon + label span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background: #333;
+        transition: all .35s;
+        z-index: 999;
+    }
+    #menuicon + label span:nth-child(1){
+        top:0;
+    }
+    #menuicon + label span:nth-child(2){
+        top:50%;
+        transform: translateY(-50%);
+    }
+    #menuicon + label span:nth-child(3){
+        bottom:0;
+    }
+
+
+    /* 반응형 메뉴 버튼 클릭시 변화 */
+    #menuicon:checked + label span:nth-child(1){
+        top:50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    #menuicon:checked + label span:nth-child(2){
+        opacity:0;
+    }
+    #menuicon:checked + label span:nth-child(3){
+        bottom:50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+    .sidebar{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right:-100%;
+        z-index: 99;
+        transition: all .30s;
+    }
+    #menuicon:checked + label + .sidebar{
+        right:0;
+    }
+    .sidebar{
+        font-size: 20px;
+        font-weight: 200;
+        color: #333;
+        padding: 10%;
+    }
+    .sidebar a{
+        display: block;
+        line-height: 30px;
+    }
+    .sidebar a:hover{
+        color: #06442e;
+        font-weight: bold;
+    }
+    .sidebar .sid_tit_s{
+       line-height: 35px;
+       padding-left: 5px;
+    }
+    .sidebar .sid_tit{
+        font-weight: bold;
+        font-size: 25px;
+        margin: 25px 0 10px 0;
+        text-decoration: underline;
+    }
+
+
+    
+    /* 반응형 메뉴 버튼안에 로그인,회원가입,마이정보 */
+    #login{
+        width:100%;
+        height: 50px;
+        margin-bottom: 70px;
+        display: block;
+    }
+    #logout{
+        width:100%;
+        height: 50px;
+        margin-bottom: 140px;
+        display: none;
+    }
+    .log_box .log_name_s{
+        width:100%;
+        line-height: 25px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .log_box{
+        height: 50px;
+        display: flex;
+        justify-content: space-between; /* 가로중앙정렬 */
+        flex-wrap: wrap;
+    }
+    .log_box .login_t{
+        width:49%;
+        height:50px;
+        font-size: 18px;
+        text-align: center;
+        background-color: #ddd;
+        color: #333;
+    }
+    .log_box .login_t a{
+        line-height: 50px;      
+        width:100%;
+        height:50px;
+    }
+    .log_box .login_t:last-child{
+        border-right: none;
+    }
+    .log_box .login_t a:hover{
+        background-color: #06442e;
+        color: #fff;
+        font-weight: bold;
+    }
+
+
+
+    
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    
+    /* 반응형 메뉴 버튼안에 로그인,회원가입,마이정보 */
+    #login{
+        margin-top: 10px;
+    }
+    #logout{
+        margin-top: 10px;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    
+    /* 반응형 메뉴 버튼안에 로그인,회원가입,마이정보 */
+    #login{
+        margin-top: 20px;
+    }
+    #logout{
+        margin-top: 20px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+    
+    /* 반응형 메뉴 버튼안에 로그인,회원가입,마이정보 */
+    #login{
+        margin-top: 30px;
+    }
+    #logout{
+        margin-top: 30px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 640px) {
+    /* 스크린의 넓이가 640px 이하인 경우에 적용되는 영역입니다. */
+    
+    /* 반응형 메뉴 버튼안에 로그인,회원가입,마이정보 */
+    #login{
+        margin-top: 40px;
+    }
+    #logout{
+        margin-top: 40px;
+    }
+
+
+    /* 퀵메뉴 */
+    #quick {
+        bottom: 10px;
+        right: 10px;
+    }
+    #quick img{        
+        width: 60px;
+        height: 60px;
+    }
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+    
+    /* 반응형 메뉴 버튼안에 로그인,회원가입,마이정보 */
+    #login{
+        margin-top: 70px;
+    }
+    #logout{
+        margin-top: 70px;
+    }
+
+
+    /* navbar 시작----------------------------------*/
+    .navbar{
+        padding:0 30px;
+    }    
+    
+
+    /* 반응형 메뉴 버튼 */
+    .menu_btn{
+        right: 30px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+
+    /* 반응형 메뉴 버튼 */
+    .menu_btn{
+        right: 20px;
+    }
+
+
+}

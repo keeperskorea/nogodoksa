@@ -1,0 +1,71 @@
+/* 모든 요소에 적용 */
+/* footer 시작----------------------------------*/
+.footer_w{
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+    background-color: #f8f8f8;
+}
+.footer_text{
+    padding-top: 50px;
+    padding:50px 15% 80px 15%;
+    text-align: center;
+}
+.fot_menu{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.fot_menu li{
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    color: #333;
+}
+.fot_menu li:after{
+    content: 'l';
+    padding: 0 10px;
+    clear: both;
+}
+/* .fot_menu li:nth-child(2)::after{
+    content: '';
+    padding:0;
+} */
+.fot_company{
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: -0.28px;
+    color: #555;
+}
+.fot_company b{
+    font-weight: bold;
+}
+.fot_company a{
+    font-weight: bold;
+    color:green;
+}
+.fot_t{
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    color: #333;
+}
+
+
+
+
+/* 반응형 시작 ----------------------------------*/
+@media screen and (max-width: 1024px) {
+
+
+}
+
+
+
+@media screen and (max-width: 640px) {
+    /* 스크린의 넓이가 640px 이하인 경우에 적용되는 영역입니다. */
+    
+    .footer_text{
+        padding:50px 10% 80px 10%;
+    }
+
+}

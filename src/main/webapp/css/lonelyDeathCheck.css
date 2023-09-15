@@ -1,0 +1,197 @@
+/* 모든 요소에 적용 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after{
+	display:none;
+	content:none;
+}
+body {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+  letter-spacing: -0.8px;
+  color: #333;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: top;
+}
+button {
+  background-color: unset;
+  border: unset;
+}
+navboar::before{
+	display:none;
+}
+/****************************시작하기부분*************************************/
+#sec1{
+	width: 100%;
+}
+.lonelyDeathCheckStart_inner{
+	margin: 0 auto;
+    max-width: 59.06%;
+    padding-top: 13rem;
+}
+.lonelyDeathCheckStart_title{
+	width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 4rem;
+    padding-bottom: 2.19rem;
+}
+.lonelyDeathCheckStart_title h1{
+	font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+.lonelyDeathCheckStart_content{
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+.lonelyDeathCheckStart_content_text{
+	width: inherit;
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-align: center;
+    padding: 2rem 0rem;
+    line-height: 4rem;
+    background-color: #F6F6F6;
+}
+.lonelyDeathCheckStart_content_page{
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 6.81rem;
+}
+.lonelyDeathCheckStart_btn{
+	text-align: center;
+	padding-bottom: 14.69rem;
+}
+.lonelyDeathCheckStart_btn button{
+	font-size: 1.25rem;
+	font-weight: bold;
+	background-color: #000000;
+    color: white;
+    width: 29.56rem;
+    height: 4.69rem;
+    border-radius: 1rem;
+}
+.lonelyDeathCheckStart2_btn{
+	text-align: center;
+	padding-bottom: 14.69rem;
+	display: flex;
+    justify-content: space-around;
+}
+.lonelyDeathCheckStart2_btn_btn1{
+	font-size: 1.25rem;
+	font-weight: bold;
+    width: 29.56rem;
+    height: 4.69rem;
+    border-radius: 1rem;
+    border: 1.5px solid #000000;
+}
+.lonelyDeathCheckStart2_btn_btn2{
+	font-size: 1.25rem;
+	font-weight: bold;
+	background-color: #000000;
+    color: white;
+    width: 29.56rem;
+    height: 4.69rem;
+    border-radius: 1rem;
+}
+/****************************시작하기부분*************************************/
+
+/****************************체크하기부분*************************************/
+.lonelyDeathCheckPage_inner{
+	margin: 0 auto;
+    max-width: 59.06%;
+    padding-top: 13rem;
+}
+.lonelyDeathCheckPage_title1{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.lonelyDeathCheckPage_title1 h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    border-bottom: 1px solid #dedede;
+    padding: 1rem;
+}
+.lonelyDeathCheckPage_checkStart{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid #dedede;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.lonelyDeathCheckPage_checkStart label{
+    margin: 3.7rem 0 3.7rem 2.2rem;
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+}
+.lonelyDeathCheckPage_checkEnd{
+	margin: 5rem;
+}
+input[type="checkbox"] {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+/****************************체크하기부분*************************************/
+
+/****************************결과부분*************************************/
+.lonelyDeathCheckResult_title{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 4rem;
+    padding-bottom: 2.19rem;
+}
+.lonelyDeathCheckResult_title h1{
+	font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+.lonelyDeathCheckResult_content{
+    width: 40%;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+}
+.lonelyDeathCheckResult_content img{
+   width: 100%;
+}
+.lonelyDeathCheckResult_content_page{
+	text-align: center;
+}
+.lonelyDeathCheckStart_content_result1{
+	font-size: 1.25rem;
+	font-weight: 800;
+	padding-bottom: 3.01rem;
+}
+.lonelyDeathCheckStart_content_result2{
+	font-size: 1.25rem;
+	font-weight: 600;
+	padding-bottom: 6.81rem;
+}
+
+/****************************결과부분*************************************/

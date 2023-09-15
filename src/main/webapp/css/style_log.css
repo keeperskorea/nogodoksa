@@ -1,0 +1,1004 @@
+/* 모든 요소에 적용 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    letter-spacing: -0.8px;
+    color:#333;
+}
+ul, li {
+    list-style:none;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+img {
+    vertical-align:top;
+}
+button {
+    background-color:unset;
+    border:unset;
+}
+
+
+/* PC버전 ----------------------------------*/
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* container 시작----------------------------------*/
+.container{
+    width: 100%;
+}
+
+/* 로그인 영역 시작 */
+.con_wrap3{
+    width:548px;
+    margin: 0 auto;
+    padding: 150px 0 20px 0;
+    letter-spacing: -0.64px;
+    color: #333;   
+}
+.con_wrap3_tit{
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 70px;
+}
+.box_t{
+    width: 100%;
+    height: 55px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.box_t:hover{
+    border: 2px solid #06442e;
+}
+.box_t2{
+    width: 100%;
+    height: 55px;
+    background-color: #06442e;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.join_box{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+.join_box a{
+    font-size: 18px;
+    width: 100%;
+    height: 55px;
+    display: block;
+}
+.text_wrap{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.keep_check{
+    position: absolute;
+    left: 0;
+}
+#checkbox1{
+    display: none;
+}
+#checkbox1 + label{
+    position: relative;
+    cursor: pointer;
+}
+#checkbox1 + label::before{
+    content: '';
+    display: inline-block;
+    margin: 0 7px 0 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -2px;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: all 0.5s;
+}
+#checkbox1:checked + label::before{
+    background-color: #06442e;
+    border-color: #06442e;
+}
+#checkbox1 + label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+}
+#checkbox1:checked + label::after{
+    background: url('../images/icon_check_on.png') no-repeat center center;
+    background-size: 16px auto;
+}
+
+.look_menu{
+    position: absolute;
+    right: 0;    
+}
+.look_menu li{
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    color: #333;
+    display: inline;
+}
+.look_menu li:after{
+    content: 'l';
+    padding: 0 10px;
+    clear: both;
+}
+.look_menu li:nth-child(2)::after{
+    content: '';
+    padding:0;
+}
+
+
+
+/* 회원가입 영역 시작 */
+.con_wrap4{
+    width:100%;
+    margin: 0 auto;
+    padding: 150px 0 20px 0;
+    letter-spacing: -0.64px;
+    color: #333;   
+}
+.step_w{
+    width:580px;
+    margin: 0 auto;
+    margin-bottom: 110px; 
+    display: flex;
+    justify-content: space-between; /* 가로중앙정렬 */
+    flex-wrap: wrap;
+}
+.step_icon{
+    width: 18px;
+    height: 2px;
+    margin-top: 27px;
+}
+#step_tit_on{
+    color: #06442e;
+    font-weight: bold;
+}
+#step_tit_on p{
+    background-color: #06442e;
+}
+.step_tit {
+    width: 70px;
+    height: auto;
+    font-size: 18px;
+    text-align: center;
+    color: #adadad;
+    font-weight: 300;
+}
+.step_tit p{
+    width: 56px;
+    height: 56px;
+    color: #fff;
+    background-color: #d8d8d8;
+    line-height: 56px;
+    font-size: 18px;
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: 12px;
+}
+
+.agree_w{
+    width: 100%;
+    height: auto;
+}
+.agree_w h1{
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: -1.2px;
+    line-height: 35px;
+    color: #333;
+    padding:0 0 20px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.agree_all{
+    margin-top: 40px;
+    padding:30px 30px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+.agree_all .agree_tit{
+    float: left;
+}
+
+/* 동의버튼 */
+.agree_all_btn{
+    text-align: right;
+}
+.agree_all_btn::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.agree_all_btn p{
+    margin-right: 5px;
+    display: inline-block;
+}
+.keep_check2{
+    display: inline-block;
+}
+/* 전체동의버튼 */
+#checkbox2{
+    display: none;
+}
+#checkbox2 + label{
+    position: relative;
+    cursor: pointer;
+}
+#checkbox2 + label::before{
+    content: '';
+    display: inline-block;
+    margin: 0 7px 0 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -2px;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: all 0.5s;
+}
+#checkbox2:checked + label::before{
+    background-color: #06442e;
+    border-color: #06442e;
+}
+#checkbox2 + label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+}
+#checkbox2:checked + label::after{
+    background: url('../images/icon_check_on.png') no-repeat center center;
+    background-size: 16px auto;
+}
+
+/* 동의버튼1 */
+#checkbox3{
+    display: none;
+}
+#checkbox3 + label{
+    position: relative;
+    cursor: pointer;
+}
+#checkbox3 + label::before{
+    content: '';
+    display: inline-block;
+    margin: 0 7px 0 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -2px;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: all 0.5s;
+}
+#checkbox3:checked + label::before{
+    background-color: #06442e;
+    border-color: #06442e;
+}
+#checkbox3 + label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+}
+#checkbox3:checked + label::after{
+    background: url('../images/icon_check_on.png') no-repeat center center;
+    background-size: 16px auto;
+}
+/* 동의버튼2 */
+#checkbox4{
+    display: none;
+}
+#checkbox4 + label{
+    position: relative;
+    cursor: pointer;
+}
+#checkbox4 + label::before{
+    content: '';
+    display: inline-block;
+    margin: 0 7px 0 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -2px;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: all 0.5s;
+}
+#checkbox4:checked + label::before{
+    background-color: #06442e;
+    border-color: #06442e;
+}
+#checkbox4 + label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+}
+#checkbox4:checked + label::after{
+    background: url('../images/icon_check_on.png') no-repeat center center;
+    background-size: 16px auto;
+}
+
+/* 동의버튼3 */
+#checkbox5{
+    display: none;
+}
+#checkbox5 + label{
+    position: relative;
+    cursor: pointer;
+}
+#checkbox5 + label::before{
+    content: '';
+    display: inline-block;
+    margin: 0 7px 0 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -2px;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: all 0.5s;
+}
+#checkbox5:checked + label::before{
+    background-color: #06442e;
+    border-color: #06442e;
+}
+#checkbox5 + label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+}
+#checkbox5:checked + label::after{
+    background: url('../images/icon_check_on.png') no-repeat center center;
+    background-size: 16px auto;
+}
+/* 동의버튼끝 */
+
+
+.agree_con{
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+}
+.agree_c01{
+    font-size: 18px;
+}
+.agree_c01 .agree_tit2{
+    float: left;
+}
+.agree_con p span{
+    color: #06442e;
+    font-weight: 600;
+}
+.con_text_box{
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+.con_text_box > div{
+    overflow: auto;
+    height: 150px;
+    padding:25px 30px;
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+}
+
+
+.join_btn_w{
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between; /* 가로중앙정렬 */
+    flex-wrap: wrap;   
+}
+.join_btn_w li{
+    width: 49%;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #ddd;
+}
+.join_btn_w li:nth-child(2){
+    background-color: #06442e;
+    color: #fff;
+}
+.join_btn_w li a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+
+/* 회원가입 2단계 시작 -------------*/
+.list_t_box_w{
+    margin-top: 50px;
+}
+.list_t_box{
+    width: 100%;
+    margin-top: 20px;
+}
+.list_t_box p{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.list_t_box .text_sub{
+    font-size: 14px;
+    padding-left: 0px;
+    margin-top: -10px;
+    color: #9b9b9b;
+    line-height: 18px;
+}
+.list_t_box2{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* 가로중앙정렬 */
+    flex-wrap: wrap;   
+}
+.list_t_box2 p{
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.box_t3{
+    width: 70%;
+    height: 55px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.number{
+    width: 29%;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #06442e;
+    display: block;
+}
+.number:hover{
+    background-color: #06442e;
+    color: #fff;
+}
+
+
+
+
+
+/* 회원가입 3단계 시작 -------------*/
+
+.list_t_box3{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* 가로중앙정렬 */
+    flex-wrap: wrap;   
+}
+.box_raido{
+    display: none;
+}
+.box_raido + .box_raido_t{
+    display: inline-block;
+    padding:15px 6%;
+    width: 50%;
+    background: #ddd;
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.64px;
+    cursor: pointer;
+}
+.box_raido:checked + .box_raido_t{
+    background: #06442e;
+    color: #fff;
+}
+
+
+.list_t_box4{
+    width: 100%;
+    margin-top: 40px;
+}
+.list_t_box4 p{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    float: left;
+}
+.list_t_box4 .text_ex{
+    font-size: 14px;
+    padding-left: 0px;
+    color: #9b9b9b;
+    line-height: 18px;
+    float: right;
+}
+.list_t_box4 .text_sub{
+    font-size: 14px;
+    padding-left: 0px;
+    margin-top: -10px;
+    color: red;
+    line-height: 18px;
+}
+.join_btn{
+    width: 50%;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 70px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #06442e;
+}
+.join_btn a{
+    width: 100%;
+    height: 50px;
+    display: block;
+}
+
+
+
+/* 회원가입 완료단계 시작 -------------*/
+.list_t_box2_w{
+    width: 100%;
+    height: 415px;
+    border: 1px solid #ddd;
+    margin-top: 50px;
+}
+.list_t_box2_w img{
+    width: 87px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 90px;
+    display: block;
+}
+.list_t_box2_w h2{
+    font-size: 28px;
+    margin-top: 25px;
+    text-align: center;
+    color: #333;
+}
+.list_t_box2_w p{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 37px;
+}
+.list_t_box2_w p span{
+    font-weight: bold;
+}
+
+
+
+
+/* 아이디 찾기 시작 -------------*/
+.tab_tit_w{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between; /* 가로중앙정렬 */
+    flex-wrap: wrap;   
+}
+.tab_con{
+    width: 50%;
+    height: 80px;
+    font-size: 18px;
+    color: #333;
+    line-height: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.tab_con a{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#tab_con_on{
+    border: 3px solid #06442e;
+    color: #06442e;
+    font-weight: 600;
+    background-color: #fff;
+}
+.guide_w{
+    width: 100%;
+    height: auto;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    line-height: 20px;
+    padding:20px 20px;
+}
+.guide_text img{
+    padding-right: 3px;
+    margin-top:2px;
+}
+
+.look_guide_w{
+    margin-top: 70px;
+}
+.look_guide_w h2{
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+.look_guide_box{
+    padding:40px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+.look_guide_box p{
+    display: inline-block;
+}
+.look_name{
+    font-weight: 500;
+    margin-right: 50px;
+}
+
+
+
+/* 비밀번호 찾기 시작 -------------*/
+.list_t_box5{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.list_t_box5 h2{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.look_view{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 반응형 시작 ----------------------------------*/
+@media screen and (max-width: 1024px) {
+    
+    
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 735px) {
+    
+    /* 로그인 영역 시작 */
+    .con_wrap3{
+        width:100%;        
+        padding: 150px 5% 20px 5%;
+    }
+    .con_wrap3_tit{
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
+
+    /* 회원가입 영역 시작 */
+    .con_wrap4{
+        padding: 120px 2% 20px 2%;
+    }
+    .step_w{
+        width:100%;
+        margin-bottom: 80px; 
+    }
+    .agree_all{
+        margin-top: 40px;
+        padding:20px 20px;
+    }
+    .agree_con{
+        margin-top: 50px;
+    }
+
+
+
+    
+}
+
+
+
+
+
+@media screen and (max-width: 630px) {
+    
+    /* 로그인 영역 시작 */
+    .con_wrap3{
+        padding: 120px 5% 20px 5%;
+    }
+
+
+
+
+    
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    
+    /* 로그인 영역 시작 */
+    .con_wrap3{
+        padding: 120px 5% 20px 5%;
+    }
+
+
+    /* 회원가입 영역 시작 */
+    .step_w{
+        width:100%;
+    }
+    .step_icon{
+        width: 14px;
+        height: 2px;
+        margin-top: 20px;
+    }
+    .step_tit {
+        width: 20%;
+        height: auto;
+        font-size: 14px;
+        text-align: center;
+        color: #adadad;
+        font-weight: 300;
+    }
+    .step_tit p{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .agree_all .agree_tit{
+        float: none;
+    }
+    /* 동의버튼 */
+    .agree_all_btn{
+        text-align: left;
+    }
+    #all_btn{
+        margin-top: 10px;
+    }
+    .agree_c01 .agree_tit2{
+        float: left;
+        margin-right: 10px;
+    }
+
+
+    /* 회원가입 2단계 시작 -------------*/
+    .number{
+        font-size: 14px;
+    }
+
+
+    /* 회원가입 완료단계 시작 -------------*/
+    .list_t_box2_w{
+        height: 320px;
+    }
+    .list_t_box2_w img{
+        padding-top: 70px;
+    }
+    .list_t_box2_w h2{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .list_t_box2_w p{
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 30px;
+    }
+
+
+
+
+    /* 아이디 찾기 시작 -------------*/
+    .look_guide_box p{
+        display: block;
+        margin: 0 auto;
+    }
+    .look_name{
+        margin-right: 0px;
+        padding-bottom: 15px;
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+
+
+@media screen and (max-width: 375px) {
+   
+    /* 로그인 영역 시작 */
+    .text_wrap{
+        position: none;
+        padding-bottom: 90px;
+    }
+    .keep_check{
+        width: 100%;
+        text-align: left;
+        position: none;
+        left: none;
+    }
+    .look_menu{
+        width: 100%;
+        padding-top: 50px;
+        position: none;
+        right: none;    
+    }
+
+    /* 회원가입 2단계 시작 -------------*/
+    .list_t_box2{
+        margin-bottom: 30px;
+    }
+    .box_t{
+        font-size: 14px;
+    }
+    .box_t3{
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .number{
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+
+    /* 회원가입 3단계 시작 -------------*/
+    .join_btn{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /* 회원가입 완료단계 시작 -------------*/
+    .list_t_box2_w{
+        height: 250px;
+    }
+    .list_t_box2_w img{
+        width: 50px;
+        padding-top: 55px;
+    }
+    .list_t_box2_w h2{
+        padding:0 10%;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .list_t_box2_w p{
+        padding:0 10%;
+        margin-top: 20px;
+    }
+
+
+    .join_btn_w li{
+        font-size: 16px;
+    }
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 320px) {
+   
+    /* 회원가입 영역 시작 */
+    /* 동의버튼 */
+    .agree_all_btn{
+        text-align: left;
+        margin-top: 5px;
+    }
+    .agree_c01 .agree_tit2{
+        width: 100%;
+        float: none;
+        margin-right: 0px;
+    }
+
+    /* 회원가입 완료단계 시작 -------------*/
+    .list_t_box2_w img{
+        padding-top: 40px;
+    }
+
+
+
+
+}

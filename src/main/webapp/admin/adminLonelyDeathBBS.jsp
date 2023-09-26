@@ -43,6 +43,8 @@
 					<th>작성일</th>
 					<th>작성자</th>
 					<th>글 확인하기</th>
+					<th>글 수정하기</th>
+					<th>글 삭제하기</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -54,7 +56,7 @@
 					int cnt = lonelyDeathBBSDAO.getNextNum();
 					
 					//한 페이지에 출력될 글 수
-					int pageSize = 15;
+					int pageSize = 10;
 					
 					//현 페이지 정보 설정
 					String pageNum = request.getParameter("pageNum");
@@ -75,11 +77,13 @@
                 %>
                 	<tr>
                 		<td><%= list.get(i).getLonelyDeathBBSID() %></td>
-                		<td><img src="../upload/<%= list.get(i).getFileRealName() %>" height="130px"></td>
+                		<td><img src="../upload/<%= list.get(i).getFileRealName() %>" width="210px" height="130px"></td>
                 		<td><%= list.get(i).getLonelyDeathBBSTitle() %></td>
                 		<td><%= list.get(i).getLonelyDeathBBSDate() %></td>
                 		<td><%= list.get(i).getUserID() %></td>
                 		<td><a href="adminLonelyDeathBBSDetailView.jsp?userID2=<%= list.get(i).getUserID() %>&lonelyDeathBBSDate=<%= list.get(i).getLonelyDeathBBSDate() %>">확인하기</a></td>
+                		<td><a href="adminLonelyDeathBBSUpdate.jsp?lonelyDeathBBSID=<%= list.get(i).getLonelyDeathBBSID() %>">수정하기</a></td>
+                		<td><a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteBBSAction.jsp?lonelyDeathBBSID=<%= list.get(i).getLonelyDeathBBSID() %>">삭제하기</a></td>
                 	</tr>
 			<%
                     }
@@ -109,13 +113,13 @@
 		
 	%>
 	<% if(startPage>pageBlock) {%>
-		<a href="adminMemberList.jsp?pageNum=<%=startPage-pageBlock%>">이전</a>
+		<a href="adminLonelyDeathBBS.jsp?pageNum=<%=startPage-pageBlock%>">이전</a>
 	<% } %>
 	<% for(int i=startPage; i<=endPage; i++){ %>
-		<a href="adminMemberList.jsp?pageNum=<%=i%>" class="pageingNumber"><%=i %></a>
+		<a href="adminLonelyDeathBBS.jsp?pageNum=<%=i%>" class="pageingNumber"><%=i %></a>
 	<% } %>
 	<% if(endPage<pageCount) { %>
-		<a href="adminMemberList.jsp?pageNum=<%=startPage+pageBlock%>">다음</a>
+		<a href="adminLonelyDeathBBS.jsp?pageNum=<%=startPage+pageBlock%>">다음</a>
 	<% } %>
 	<% } %>
 	</div>

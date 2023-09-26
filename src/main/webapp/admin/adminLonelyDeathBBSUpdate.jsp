@@ -29,10 +29,7 @@ body {
     if (session.getAttribute("userID") != null){
         userID = (String) session.getAttribute("userID");
     }
-    String userID2 = request.getParameter("userID2");
-    String lonelyDeathBBSDate = request.getParameter("lonelyDeathBBSDate");
-    
-    System.out.println("체크값 : "+lonelyDeathBBSDate);
+    String lonelyDeathBBSID = request.getParameter("lonelyDeathBBSID");
     
     int resultNum = 0;
     %>
@@ -40,9 +37,7 @@ body {
 	<header><jsp:include page="adminHeader.jsp"></jsp:include></header>
 
 
-	<div style="text-align: center;">게시글 상세 보기</div>
-
-	<%
+		<%
 					LonelyDeathBBSDAO lonelyDeathBBSDAO = new LonelyDeathBBSDAO();
 					
 					
@@ -63,29 +58,54 @@ body {
 					int startRow = (currentPage-1)*pageSize + 1;
 			
 
-					ArrayList<LonelyDeathBBSDTO> list = lonelyDeathBBSDAO.getDetailList(startRow, pageSize, lonelyDeathBBSDate);
+					ArrayList<LonelyDeathBBSDTO> list = lonelyDeathBBSDAO.getUpdate(startRow, pageSize, lonelyDeathBBSID);
                     
                     for(int i = 0; i < list.size(); i++) //  http://kid6403.cafe24.com/image/rip_3.jpg 이미지파일 실제 보여지는 주소
                     {
                     	
                 %>
-			
-				<div class="view_container" style="text-align: center;">
-					제목 :
-					<%= list.get(i).getLonelyDeathBBSTitle() %>
-				</div>
-				<div class="lonelyDeathPreventActionView_content">
-					<p>
-						<img class=""
-							src="/NoGodoksa/upload/<%= list.get(i).getFileRealName() %>">
-					</p>
-					<textarea class="lonelyDeathPreventActionView_textarea"
-						readonly="readonly"><%= list.get(i).getLonelyDeathBBSContent() %></textarea>
-				</div>
 
-	<%
+		<section id="admin_write">
+			<div class="admin_write_inner">
+				<div class="admin_write_head">
+					<form method="post" action="updateAction.jsp"
+						enctype="multipart/form-data">
+						<input type="hidden" name="lonelyDeathBBSID" value="<%= list.get(i).getLonelyDeathBBSID() %>">
+						<table class="admin_write_table"
+							style="text-align: center; boarder: 1px solid #dddddd">
+							<thead>
+								<tr>
+									<th colspan="2"
+										style="background-color: #eeeeee; text-align: center; font-size: 1.5rem">고독사
+										게시글 수정 페이지</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>제목</td>
+									<td><input type="text" class="admin_write_table_title"
+										placeholder=""
+										name="lonelyDeathBBSTitle" value="<%= list.get(i).getLonelyDeathBBSTitle() %>" maxlength="30"></td>
+								</tr>
+								<tr>
+									<td>내용</td>
+									<td><textarea name="lonelyDeathBBSContent"
+											style="resize: none; width: 100%; height: 10rem;"><%= list.get(i).getLonelyDeathBBSContent() %></textarea></td>
+								</tr>
+							</tbody>
+						</table>
+						첨부사진 : <input type="file" name="file"><br>
+						<!-- 위패사진 : <input type="file" name="file2"><br> -->
+						<input type="submit" class="admin_write_table_button" value="수정하기">
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<%
                     }
                 %>
+
 
 	<hr>
 	<div class="next_btn">

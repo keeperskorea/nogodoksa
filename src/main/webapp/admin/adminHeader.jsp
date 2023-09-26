@@ -62,6 +62,7 @@ header{
 			<div>
 				<h1 class="title"><a href="adminMemberList.jsp">관리자 페이지</a></h1>
 				<ul class="gnb">
+					<li><a href="../main.jsp">홈으로</a></li>
 					<li><a href="adminMemberList.jsp">회원관리</a></li>
 					<li><a href="adminLonelyDeathBBS.jsp">고독사 글 확인</a></li>
 				</ul>

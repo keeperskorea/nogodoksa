@@ -15,11 +15,16 @@
 <link rel="stylesheet" href="css/style_sub2.css">
 <link rel="stylesheet" href="css/nogodoksa_footer.css">
 <link rel="stylesheet" href="css/nogodoksa_header.css">
-<title>Endless Park</title>
+<title>고독사예방국민운동</title>
 <style>
 	.view_container{
+		font-size: 1.25rem;
 		padding-top: 130px;
 		text-align: center;
+		padding-bottom: 2rem;
+		margin-left: 15rem;
+   		margin-right: 15rem;
+    	border-bottom: 1px solid #ddd;
 	}
 	.btn{
 		margin: 1rem;
@@ -58,9 +63,11 @@
 	<div class="view_container">
 		제목 : <%= lonelyDeathBBS.getLonelyDeathBBSTitle() %>
 	</div>
-	<div>
-		내용 : <img class="" src="/NoGodoksa/upload/<%= lonelyDeathBBS.getFileRealName() %>">
-		<%= lonelyDeathBBS.getLonelyDeathBBSContent() %>
+	<div class="lonelyDeathPreventActionView_content">
+		<p>
+		<img class="" src="/NoGodoksa/upload/<%= lonelyDeathBBS.getFileRealName() %>">
+		</p>
+		<textarea class="lonelyDeathPreventActionView_textarea" readonly="readonly"><%= lonelyDeathBBS.getLonelyDeathBBSContent() %></textarea>
 	</div>
 	
 <%-- 			<%

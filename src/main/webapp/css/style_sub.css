@@ -165,6 +165,24 @@ i {
 
 /******************************* 로그인 *******************************/
 
+/******************************* 노고독사 자세히 보기 *******************************/
+.lonelyDeathPreventActionView_content{
+	text-align: center;
+	margin: 1rem;
+}
+.lonelyDeathPreventActionView_content p{
+	margin: 1rem;
+}
+textarea:focus{
+	outline: none;
+}
+.lonelyDeathPreventActionView_textarea{
+	width: 50%;
+	height: 30rem;
+	border: none;
+	resize: none;
+}
+/******************************* 노고독사 자세히 보기 끝*******************************/
 
 /***************************************엔드리스파크 검색창***************************************/
 .navbar {
